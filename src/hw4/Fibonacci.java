@@ -1,4 +1,4 @@
-package SQRT_Fibonacci;
+package hw4;
 
 import java.util.Scanner;
 
