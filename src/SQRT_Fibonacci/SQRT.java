@@ -10,7 +10,7 @@ public class SQRT {
         if (numb > 0) {
             System.out.println("sqrt(" + numb + ")=" + Math.sqrt(numb));
         } else {
-            System.out.println("Value must be >0 " + numb);
+            throw new RuntimeException ("Value must be >0 " + numb);
         }
     }
 
