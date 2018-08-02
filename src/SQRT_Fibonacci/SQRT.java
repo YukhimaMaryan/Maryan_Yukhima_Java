@@ -4,7 +4,7 @@ public class SQRT {
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Enter value:");
+        System.out.print("Enter value:");//Enter from keyboard
         int numb = in.nextInt();
 
         if (numb > 0) {

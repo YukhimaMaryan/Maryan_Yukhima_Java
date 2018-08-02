@@ -27,11 +27,11 @@ public class Animal {
     public static void main(String[] args) {
 
         Scanner in = new Scanner(System.in);
-        System.out.print("Say: ");
+        System.out.print("Say: ");//Enter from keyboard
         String say = in.nextLine();
-        System.out.print("Go for: ");
+        System.out.print("Go for: ");//Enter from keyboard
         int go = in.nextInt();
-        System.out.print("Print number of the animal for info (owl[1], frog[2], bear[3]): ");
+        System.out.print("Print number of the animal for info (owl[1], frog[2], bear[3]): ");//Enter from keyboard
         int choseanimal = in.nextInt();
 
         Animal ani1 = new Animal("owl", "small", "grey");

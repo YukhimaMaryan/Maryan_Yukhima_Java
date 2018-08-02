@@ -22,7 +22,7 @@ public class Practice35 {
         dates.size();
 
         if (list == null || list.isEmpty()) {
-            throw new RuntimeException ("Current collection is empty !!!");
+            throw new NullPointerException ("<Current collection is empty !!!>");
 
         }
 

@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Practical5 {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.print("Enter number: ");//Enter from keyboard
+        System.out.print("Enter number greater or less than 10: ");//Enter from keyboard
         int numb = in.nextInt();
 
 

@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Fibonacci {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter how many Fibonacci numbers to print:");
+        System.out.println("Enter how many Fibonacci numbers to print:");//Enter from keyboard number of fibanacci array lengh
         int numb = scanner.nextInt();
         int[] fibonaci = new int[numb];
 
