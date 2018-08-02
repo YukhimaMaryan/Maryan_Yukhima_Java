@@ -1,9 +1,10 @@
+package hw3;
 
-public class Practice34 {
+public class Practice33 {
     public enum User {
-        AGRONOMIST("Joe Cash", "12345"),
-        ACCOUNTANT("Suzy May", "32451"),
-        DIRECTOR("Jack Smith", "54321");
+        USERAG("agronomist", "12345"),
+        USERAC("accountant", "32451"),
+        USERDIR("director", "54321");
 
         private String name;
         private String code;
@@ -20,24 +21,13 @@ public class Practice34 {
         public String getCode() {
             return code;
         }
-
     }
 
-    public void startPrint() {
-        String startPrint = "Start printing cridentials:";
-        System.out.println(startPrint);
-    }
+    ;
+
     public static void main(String[] args) {
         for (User s : User.values())
             System.out.println(s + ": " + s.getName() + " " + s.getCode());
-
-    }
-    public void finishPrint() {
-        String finishPrint = "Finish printing cridentials:";
-        System.out.println(finishPrint);
     }
 }
-
-
-
 

@@ -1,7 +1,15 @@
+package hw1;
+
+import java.util.Scanner;
+
 public class Practical5 {
     public static void main(String[] args) {
-        int k = 4;
-        if (k <= 10) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Enter number: ");
+        int numb = in.nextInt();
+
+
+        if (numb <= 10) {
             for (int i = 0; i <= 10; i++) {
                 System.out.println(i);
             }

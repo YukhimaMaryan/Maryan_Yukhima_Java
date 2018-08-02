@@ -1,3 +1,5 @@
+package hw1;
+
 public class practical4 {
 
     public static void main(String[] args) {

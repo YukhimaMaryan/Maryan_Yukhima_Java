@@ -1,3 +1,5 @@
+package hw2;
+
 public class Animal {
     private String name;
     private String size;
@@ -21,6 +23,11 @@ public class Animal {
         System.out.println(ani1.printInformation());
         System.out.println(ani2.printInformation());
         System.out.println(ani3.printInformation());
+
+
+
+
+
     }
 }
 
