@@ -1,5 +1,5 @@
 package hw1;
-
+//print your name, surname in console
 public class practical4 {
 
     public static void main(String[] args) {

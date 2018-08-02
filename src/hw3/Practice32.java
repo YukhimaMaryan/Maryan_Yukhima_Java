@@ -1,5 +1,6 @@
 package hw3;
-
+//Create some collection with implementation of List interface, also with random
+//numbers inside, try to sort current collection
 import java.util.ArrayList;
 import java.util.Collections;
 

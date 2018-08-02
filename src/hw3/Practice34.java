@@ -1,5 +1,9 @@
 package hw3;
-
+//Create three methods: 1. startPrint() - should print: "Start printing user credentials"
+//(use annotation @Before with), 2. printUserCredentials() - should print all
+//credential of priviusly created users roles (use annotation @Test with), 3.
+//finishPrint() - should print: “Finish printing user credentials" (use annotation @After
+//with)
 public class Practice34 {
     public enum User {
         AGRONOMIST("Joe Cash", "12345"),
@@ -41,6 +45,7 @@ public class Practice34 {
         }
     }
 }
+
 
 
 

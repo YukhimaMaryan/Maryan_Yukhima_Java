@@ -1,6 +1,13 @@
 package hw2;
 import java.util.Scanner;
-
+//1)Describe a class (Animal), use :
+//- access and non-access (if need) modifiers
+//2) Create a few methods (methods should print some information at list):
+//- method 'go' with enter parameter like amount of steps
+//- method 'say' with enter parameter what to say
+//- method 'print Information' with nothing to enter, but must print all
+//information about abject
+//3) Create an Object of class Animal
 public class Animal {
     private String name;
     private String size;
