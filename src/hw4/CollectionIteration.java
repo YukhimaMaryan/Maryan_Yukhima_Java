@@ -1,6 +1,7 @@
 package hw4;
-
+import java.util.Iterator;
 import java.util.ArrayList;
+import java.util.List;
 
 //    Task description
 //    Create class Student that has following fields: name, sex, group, language, year.
@@ -14,9 +15,10 @@ import java.util.ArrayList;
 // 3. Calculate the dispertion of students by study years
 // 4. Build a map: what sudents belong to which group
 // 5. Create a set of groups (unique items), students belong to
+
 public class CollectionIteration {
 
-    public class Student {
+    private class Student {
         private String name;
         private String sex;
         private String group;
@@ -24,7 +26,14 @@ public class CollectionIteration {
         private int year;
 
 
-        private ArrayList<Student> studentList;
+        public Student(String name, String sex, String group, String language, int year) {
+            this.name = name;
+            this.sex = sex;
+            this.group = group;
+            this.language = language;
+            this.year = year;
+
+        }
 
         public String getName() {
             return name;
@@ -46,51 +55,40 @@ public class CollectionIteration {
             return year;
         }
 
-        public void setName(String name) {
-            this.name = name;
-        }
+        private class studaki {
+            public void main(String[] args) {
+                List<Student> list = new ArrayList<Student>();
+                list.add(new Student("Joe Fox", "male", "math", "english", 1));
+                list.add(new Student("Ani Rigg", "female", "phys", "german", 2));
+                list.add(new Student("Ivan Ivanov", "male", "hist", "ukrainian", 2));
 
-        public void setSex(String sex) {
-            this.sex = sex;
-        }
+                int year = 1;
+                printStudents(list, year);
 
-        public void setGroup(String group) {
-            this.group = group;
-        }
+                year = 2;
+                printStudents(list,  year);
+            }
 
-        public void setLanguage(String language) {
-            this.language = language;
-        }
 
-        public void setYear(int year) {
-            this.year = year;
-        }
+            public void printStudents(List<Student> students, int year) {
+                System.out.println("Students " + " year:" + year);
 
-        String printInformation() {
-            return name + " " + sex + " " + group + " " + language + " " + year;
-        }
-
-        public Student(String name, String sex, String group, String language, int year) {
-            this.name = name;
-            this.sex = sex;
-            this.group = group;
-            this.language = language;
-            this.year = year;
-        }
-
-        public void main(String[] args) {
-            Student stud1 = new Student("Joe Fox", "male", "math", "english", 1);
-            Student stud2 = new Student("Ani Rigg", "female", "phys", "german", 2);
-            Student stud3 = new Student("Ivan Ivanov", "male", "hist", "ukrainian", 3);
-        }
-            public void print(){
-                for(Student s : studentList)
-                    System.out.println(s.getName() + s.getSex() + s.getGroup() + s.getLanguage()+ s.getYear());
+                Iterator<Student> iter = students.iterator();
+                while (iter.hasNext()) {
+                    Student student = iter.next();
+                    if (student.getYear() == year) {
+                        System.out.println(student.getName());
+                    }
 
                 }
             }
-
         }
+    }
+}
+
+
+
+
 
 
 
