@@ -16,14 +16,15 @@ import java.util.ArrayList;
 // 5. Create a set of groups (unique items), students belong to
 public class CollectionIteration {
 
-    public class Course {
+    public class Student {
         private String name;
         private String sex;
         private String group;
         private String language;
         private int year;
 
-        private ArrayList<Course> studentList;
+
+        private ArrayList<Student> studentList;
 
         public String getName() {
             return name;
@@ -44,7 +45,6 @@ public class CollectionIteration {
         public int getYear() {
             return year;
         }
-        //Setters
 
         public void setName(String name) {
             this.name = name;
@@ -70,7 +70,7 @@ public class CollectionIteration {
             return name + " " + sex + " " + group + " " + language + " " + year;
         }
 
-        public Course(String name, String sex, String group, String language, int year) {
+        public Student(String name, String sex, String group, String language, int year) {
             this.name = name;
             this.sex = sex;
             this.group = group;
@@ -78,15 +78,15 @@ public class CollectionIteration {
             this.year = year;
         }
 
-        // Testing code
         public void main(String[] args) {
-            Course oop1 = new Course("Joe Fox", "male", "math", "english", 1);
-            Course oop2 = new Course("Ani Rigg", "female", "phys", "german", 2);
-            Course oop3 = new Course("Ivan Ivanov", "male", "hist", "ukrainian", 3);
+            Student stud1 = new Student("Joe Fox", "male", "math", "english", 1);
+            Student stud2 = new Student("Ani Rigg", "female", "phys", "german", 2);
+            Student stud3 = new Student("Ivan Ivanov", "male", "hist", "ukrainian", 3);
         }
             public void print(){
+                for(Student s : studentList)
+                    System.out.println(s.getName() + s.getSex() + s.getGroup() + s.getLanguage()+ s.getYear());
 
-                    System.out.println(getName() + getSex() + getGroup() + getLanguage()+ getYear());
                 }
             }
 
