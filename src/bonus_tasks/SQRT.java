@@ -1,4 +1,4 @@
-package hw4;
+package bonus_tasks;
 import java.util.Scanner;
 public class SQRT {
 
