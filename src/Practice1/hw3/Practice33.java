@@ -1,4 +1,4 @@
-package hw3;
+package Practice1.hw3;
 //Create "class enum" User, create a few user roles inside, every enum must have
 //two parameters: 1. user name, 2. user pass
 public class Practice33 {

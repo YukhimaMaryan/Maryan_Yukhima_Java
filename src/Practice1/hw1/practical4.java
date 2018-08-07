@@ -1,4 +1,4 @@
-package hw1;
+package Practice1.hw1;
 //print your name, surname in console
 public class practical4 {
 

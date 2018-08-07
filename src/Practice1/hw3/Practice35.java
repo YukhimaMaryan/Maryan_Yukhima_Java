@@ -1,4 +1,4 @@
-package hw3;
+package Practice1.hw3;
 
 import java.util.*;
 

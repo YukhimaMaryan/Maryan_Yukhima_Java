@@ -1,4 +1,4 @@
-package hw1;
+package Practice1.hw1;
 //print variable less then 10(if it is true)
 //or variable more then 10(if it is true)
 import java.util.Scanner;

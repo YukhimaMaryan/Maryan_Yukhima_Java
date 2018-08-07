@@ -1,4 +1,4 @@
-package Practice2;
+package Practice2.practice21;
   class Man extends Human implements iTalk  {
      public Man() {
 

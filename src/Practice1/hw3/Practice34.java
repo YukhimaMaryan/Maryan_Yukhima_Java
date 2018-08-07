@@ -1,4 +1,4 @@
-package hw3;
+package Practice1.hw3;
 //Create three methods: 1. startPrint() - should print: "Start printing user credentials"
 //(use annotation @Before with), 2. printUserCredentials() - should print all
 //credential of priviusly created users roles (use annotation @Test with), 3.

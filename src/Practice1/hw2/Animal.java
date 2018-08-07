@@ -1,4 +1,4 @@
-package hw2;
+package Practice1.hw2;
 import java.util.Scanner;
 //1)Describe a class (Animal), use :
 //- access and non-access (if need) modifiers

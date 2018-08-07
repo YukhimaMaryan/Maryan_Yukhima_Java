@@ -1,4 +1,4 @@
-package hw3;
+package Practice1.hw3;
 //Create an array with random numbers inside, try to sort current array
 import java.util.Arrays;
 

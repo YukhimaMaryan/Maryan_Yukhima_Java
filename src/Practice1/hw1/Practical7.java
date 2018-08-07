@@ -1,4 +1,4 @@
-package hw1;
+package Practice1.hw1;
 //print you name each sumbol in new line(using WHILE loop and
 //string methods chartAt(), length())
 public class Practical7 {
