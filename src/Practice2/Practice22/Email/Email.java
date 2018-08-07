@@ -1,4 +1,4 @@
-package Practice2.Practice22;
+package Practice2.Practice22.Email;
 //Task 1. Implement Builder for Email object with fields: to(string), cc(string), subject(string), body(string),
 //priority(int), attachment(boolean: true/false). Fields to and subject are mandatory, other are optional.
 //Task 2. Implement Singleton for email sending service, so you can call it from any place
@@ -6,15 +6,6 @@ package Practice2.Practice22;
 
 public class Email {
 
-    private static Email INSTANCE = new Email();
-
-    private Email() {
-
-    }
-
-    public static Email getInstance() {
-        return INSTANCE;
-    }
 
 
     public  String to;//required
@@ -70,6 +61,8 @@ public class Email {
             this.subject = subject;
         }
 
+
+
         public EmailBuilder priority(int priority) {
             this.priority = priority;
             return this;
@@ -91,6 +84,7 @@ public class Email {
         }
 
         public Email build() {
+
             return new Email(this);
         }
 
