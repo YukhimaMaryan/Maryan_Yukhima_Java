@@ -61,6 +61,7 @@ public class CollectionIteration {
                 list.add(new Student("Joe Fox", "male", "math", "english", 1));
                 list.add(new Student("Ani Rigg", "female", "phys", "german", 2));
                 list.add(new Student("Ivan Ivanov", "male", "hist", "ukrainian", 2));
+                System.out.println("Students " + " year:" + year);
 
                 int year = 1;
                 printStudents(list, year);
@@ -71,7 +72,7 @@ public class CollectionIteration {
 
 
             public void printStudents(List<Student> students, int year) {
-                System.out.println("Students " + " year:" + year);
+
 
                 Iterator<Student> iter = students.iterator();
                 while (iter.hasNext()) {
@@ -80,11 +81,16 @@ public class CollectionIteration {
                         System.out.println(student.getName());
                     }
 
+                    }
+
                 }
-            }
+
+                }
         }
-    }
 }
+
+
+
 
 
 
