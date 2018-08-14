@@ -1,4 +1,4 @@
-package Practice3;
+package Practice3.practice311;
 //Try to create file and write a string: "ELEKS QA Camp" in, then try to read attendant string from
 import java.io.*;
 
