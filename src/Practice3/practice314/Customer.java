@@ -1,4 +1,4 @@
-package Practice3;
+package Practice3.practice314;
 //Create XML file: "Customer", try to write the object into file and also try to read it back to java
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
