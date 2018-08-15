@@ -9,5 +9,13 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="java" level="project" />
     <orderEntry type="library" name="download" level="project" />
+    <orderEntry type="library" name="bin" level="project" />
+    <orderEntry type="library" name="TestNG-J_3670" level="project" />
+    <orderEntry type="library" name="download1" level="project" />
+    <orderEntry type="library" name="javax.activation-1.2.0" level="project" />
+    <orderEntry type="library" name="jaxb-api-2.3.0" level="project" />
+    <orderEntry type="library" name="jaxb-core-2.3.0" level="project" />
+    <orderEntry type="library" name="jaxb-impl-2.3.0" level="project" />
+    <orderEntry type="library" name="download2" level="project" />
   </component>
 </module>

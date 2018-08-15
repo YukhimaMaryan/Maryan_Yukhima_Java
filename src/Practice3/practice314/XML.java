@@ -9,21 +9,18 @@ import java.io.File;
 
 public class XML {
 
-    private static final String FILE_NAME = "jaxb-emp.xml";
+    private static final String FILE_NAME = "customer.xml";
 
     public static void main(String[] args) {
-        Customer emp = new Customer();
-        emp.setId(1);
-        emp.setAge(25);
-        emp.setName("Pankaj");
-        emp.setGender("Male");
-        emp.setRole("Developer");
-        emp.setPassword("sensitive");
+        Customer custm = new Customer();
+        custm.setId(1);
+        custm.setAge(27);
+        custm.setName("Vasia");
 
-        jaxbObjectToXML(emp);
+        objectXML(custm);
 
-        Customer empFromFile = jaxbXMLToObject();
-        System.out.println(empFromFile.toString());
+        Customer cusFromFile = jaxbXMLToObject();
+        System.out.println(cusFromFile.toString());
     }
 
 
@@ -31,30 +28,25 @@ public class XML {
         try {
             JAXBContext context = JAXBContext.newInstance(Customer.class);
             Unmarshaller un = context.createUnmarshaller();
-            Customer emp = (Customer) un.unmarshal(new File(FILE_NAME));
-            return emp;
-        } catch (JAXBException e) {
-            e.printStackTrace();
+            Customer custm = (Customer) un.unmarshal(new File(FILE_NAME));
+            return custm;
+        } catch (JAXBException c) {
+            c.printStackTrace();
         }
         return null;
     }
 
 
-    private static void jaxbObjectToXML(Customer emp) {
+    private static void objectXML(Customer custm) {
 
         try {
             JAXBContext context = JAXBContext.newInstance(Customer.class);
             Marshaller m = context.createMarshaller();
-            //for pretty-print XML in JAXB
             m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-
-            // Write to System.out for debugging
-            // m.marshal(emp, System.out);
-
             // Write to File
-            m.marshal(emp, new File(FILE_NAME));
-        } catch (JAXBException e) {
-            e.printStackTrace();
+            m.marshal(custm, new File(FILE_NAME));
+        } catch (JAXBException c) {
+            c.printStackTrace();
         }
     }
 

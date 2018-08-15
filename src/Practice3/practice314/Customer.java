@@ -1,35 +1,16 @@
 package Practice3.practice314;
 //Create XML file: "Customer", try to write the object into file and also try to read it back to java
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlRootElement(name = "Emp")
-@XmlType(propOrder = {"name", "age", "role", "gender"})
+@XmlRootElement(name = "customer")
+@XmlType(propOrder = {"id", "name", "age"})
 public class Customer {
 
     private int id;
-
-    private String gender;
-
     private int age;
     private String name;
-    private String role;
-
-    private String password;
-
-
-    @XmlTransient
-    public String getPassword() {
-        return password;
-    }
-
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
 
     @XmlAttribute
@@ -62,31 +43,9 @@ public class Customer {
         this.name = name;
     }
 
-
-    @XmlElement(name = "gen")
-    public String getGender() {
-        return gender;
-    }
-
-
-    public void setGender(String gender) {
-        this.gender = gender;
-    }
-
-
-    public String getRole() {
-        return role;
-    }
-
-
-    public void setRole(String role) {
-        this.role = role;
-    }
-
-
     @Override
     public String toString() {
-        return "ID = " + id + " NAME=" + name + " AGE=" + age + " GENDER=" + gender + " ROLE=" +
-                role + " PASSWORD=" + password;
+        return "ID = " + id + " NAME=" + name + " AGE=" + age ;
     }
+
 }
