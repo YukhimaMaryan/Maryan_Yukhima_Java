@@ -1,8 +1,9 @@
-package Practice3;
+package Practice3.practice315;
 //Create an array of numbers, convert it to collection of List, using streams try to find min, max and
 //average value of collection, also try to sort and filter collection
 
 import java.util.Arrays;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,12 +18,10 @@ public class practice315 {
 
         List<Integer> list = Arrays.stream(number).boxed().collect(Collectors.toList());
 
+
         System.out.println("list : " + list);//list
-        System.out.println(list.stream().max(Integer::compare).get());//max
-        System.out.println(list.stream().min(Integer::compare).get());//min
-
-
-
+        System.out.println("max  : " + list.stream().max(Integer::compare).get());//max
+        System.out.println("min  : " + list.stream().min(Integer::compare).get());//min
 
     }
 }
