@@ -16,11 +16,13 @@ import org.testng.annotations.Test;
 //data from an array
 
     public class TestNG {
-        @Parameters({ "number1", "number2", "sum" })
+        @Parameters({ "number1", "number2", "sum",  "global_count"})
         @Test
-        public void testAdd(int number1, int number2, int sum) {
+        public void testAdd(int number1, int number2, int sum, int global_count) {
             Calculator calculator = new Calculator();
-            Assert.assertEquals(calculator.add(number1, number2), sum);
+            for (int i = 0; i < global_count; i++) {
+                Assert.assertEquals(calculator.add(number1, number2), sum);
+            }
         }
         @Parameters({ "number1", "number2", "difference" })
         @Test
@@ -28,14 +30,13 @@ import org.testng.annotations.Test;
             Calculator calculator = new Calculator();
             Assert.assertEquals(calculator.subtract(number1, number2), difference);
         }
-        @Parameters({ "number1", "number2", "multiplication", "global_count" })
+        @Parameters({ "number1", "number2", "multiplication" })
         @Test
-        public void testMultiply(int number1, int number2, int multiplication, int global_count) {
+        public void testMultiply(int number1, int number2, int multiplication) {
             Calculator calculator = new Calculator();
-            for (int i = 0; i < global_count; i++) {
                 Assert.assertEquals(calculator.multiply(number1, number2), multiplication);
             }
-        }
+
         @Parameters({ "number1", "number2", "division" })
         @Test
         public void testDivide(int number1, int number2, int division) {

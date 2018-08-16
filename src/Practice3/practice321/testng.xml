@@ -6,17 +6,17 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="simple_suite">
+<suite name="test_suite">
 
     <parameter name="global_count" value="10" />
 
     <test name="calc">
-        <parameter name="number1"  value="30" />
+        <parameter name="number1"  value="10" />
         <parameter name="number2"  value="5" />
-        <parameter name="sum"  value="35" />
-        <parameter name="difference"  value="25" />
-        <parameter name="multiplication"  value="150" />
-        <parameter name="division"  value="6" />
+        <parameter name="sum"  value="15" />
+        <parameter name="difference"  value="5" />
+        <parameter name="multiplication"  value="50" />
+        <parameter name="division"  value="2" />
         <classes>
             <class name="Practice3.practice321.TestNG"/>
         </classes>
