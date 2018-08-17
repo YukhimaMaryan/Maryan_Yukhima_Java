@@ -5,22 +5,26 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="test_suite">
-
-    <parameter name="global_count" value="10" />
-
     <test name="calc">
+        <parameter name="global_count" value="10" />
         <parameter name="number1"  value="10" />
         <parameter name="number2"  value="5" />
         <parameter name="sum"  value="15" />
         <parameter name="difference"  value="5" />
         <parameter name="multiplication"  value="50" />
         <parameter name="division"  value="2" />
-        <classes>
-            <class name="Practice3.practice321.TestNG"/>
-        </classes>
-    </test>
+        <groups>
+            <run>
+                <include name="group1" />
+                <include name="group2" />
+            </run>
+        </groups>
 
-</suite>
+            <classes>
+                <class name="Practice3.practice321.calculatorXML.TestNG"/>
+            </classes>
+        </test>
+    </suite>
+
 
