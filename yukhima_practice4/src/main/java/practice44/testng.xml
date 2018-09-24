@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="loginTestSuite" verbose="1" >
+    <parameter name="username" value="yukhimarian@gmail.com"/>
+    <parameter name="password" value=">1p*cA1+5"/>
+
+
+    <test name="tests">
+        <packages>
+            <package name="practice44" />
+        </packages>
+    </test>
+</suite>

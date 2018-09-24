@@ -9,18 +9,6 @@
     <version>1.0-SNAPSHOT</version>
 <dependencies>
     <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.12</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
-        <groupId>org.testng</groupId>
-        <artifactId>testng</artifactId>
-        <version>7.0.0-beta1</version>
-        <scope>test</scope>
-    </dependency>
-    <dependency>
         <groupId>io.github.bonigarcia</groupId>
         <artifactId>webdrivermanager</artifactId>
         <version>3.0.0</version>
@@ -30,13 +18,50 @@
         <artifactId>selenium-chrome-driver</artifactId>
         <version>3.11.0</version>
     </dependency>
+
+
     <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.12</version>
-        <scope>compile</scope>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-support</artifactId>
+        <version>2.53.0</version>
     </dependency>
+    <dependency>
+        <groupId>org.testng</groupId>
+        <artifactId>testng</artifactId>
+        <version>7.0.0-beta1</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>slf4j-simple</artifactId>
+        <version>1.6.2</version>
+        <scope>test</scope>
+    </dependency>
+
 </dependencies>
-
-
-</project>
+<build>
+<plugins>
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+    </plugin>
+    <plugin>
+        <artifactId>maven-resources-plugin</artifactId>
+        <version>2.7</version>
+    </plugin>
+    <!-- Following plugin executes the testng tests -->
+    <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.19</version>
+        <configuration>
+            <!-- Suite testng xml file to consider for test execution -->
+            <suiteXmlFiles>
+                <suiteXmlFile>src/test/java/testng.xml</suiteXmlFile>
+            </suiteXmlFiles>
+        </configuration>
+    </plugin>
+</plugins>
+</build>
+        </project>
