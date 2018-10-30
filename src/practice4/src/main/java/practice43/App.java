@@ -1,5 +1,5 @@
-package practice43;
-//Create script for logging in to http://eds_university.eleks.com/login
+package practice4.src.main.java.practice43;
+//Create script for logging in to http://.com/login
 //Refactor your code using Page Object and Page Factory
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -23,7 +23,7 @@ public class App {
 
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("http://eds_university.eleks.com/login");
+        driver.get("http:///login");
         logpage = new LoginPage(driver);
 
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);

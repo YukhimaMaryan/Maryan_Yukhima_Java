@@ -1,4 +1,4 @@
-package practice43;
+package practice4.src.main.java.practice43;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

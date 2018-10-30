@@ -1,4 +1,4 @@
-//Prepare testing application for portal http://eds_university.eleks.com/ use your own credentials provided
+//Prepare testing application for portal http://.com/ use your own credentials provided
 //
 //Testing application should contai at least following tests:
 //

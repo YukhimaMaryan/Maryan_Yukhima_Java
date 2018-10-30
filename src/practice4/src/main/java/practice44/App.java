@@ -1,4 +1,4 @@
-package practice44;
+package practice4.src.main.java.practice44;
 //1) Create a new product. Check if it exists and all fields are filled in correctly.
 //2) Edit a new product. Check if all fields have been edited correctly.
 //3) Remove the product. Check if it was deleted.
@@ -31,7 +31,7 @@ public class App {
 
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.get("http://eds_university.eleks.com/login");
+        driver.get("http://.com/login");
         logpage = new LoginPage(driver);
 
         driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
@@ -81,7 +81,7 @@ public class App {
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
         Actions actions5 = new Actions(driver);
-        actions5.sendKeys("Marian_Yukhima Product Family 1");
+        actions5.sendKeys("Spmething///");
         actions5.build().perform();
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
@@ -99,7 +99,7 @@ public class App {
             Actions actions7 = new Actions(driver);
             actions7.moveToElement(driver.findElement(new By.ByXPath("/html/body/app/main/administration/div[2]/div/div/projects/div/div[1]/div[1]/div[2]/search-field/div/input")));
             actions7.click();
-            actions7.sendKeys("Product_5");
+            actions7.sendKeys("Produ5");
             actions7.build().perform();
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 

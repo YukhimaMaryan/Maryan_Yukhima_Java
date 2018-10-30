@@ -1,6 +1,7 @@
-package practice43;
+package practice4.src.main.java.practice44;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 public class ProductPage {
 
         private WebDriver driver;
@@ -15,3 +16,4 @@ public class ProductPage {
             return driver.findElement(By.name("product")).getText();
         }
     }
+
