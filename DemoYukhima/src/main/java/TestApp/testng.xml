@@ -1,0 +1,21 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="loginTestSuite" verbose="1" >
+    <parameter name="username" value=""/>
+    <parameter name="password" value=""/>
+    <parameter name="username" value=""/>
+    <parameter name="incorrectpassword" value=""/>
+    <parameter name="username" value=""/>
+    <parameter name="incorrectpassword" value=""/>
+    <parameter name="username" value=""/>
+    <parameter name="incorrectpassword" value=" "/>
+    <parameter name="username" value=""/>
+    <parameter name="incorrectpassword" value="%#$@*#*^:"/>
+
+
+    <test name="Login tests">
+        <packages>
+            <package name="TestApp" />
+        </packages>
+    </test>
+</suite>
