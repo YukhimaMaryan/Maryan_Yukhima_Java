@@ -26,9 +26,6 @@
 
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.MatcherAssert.assertThat;
-
-import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import io.restassured.http.ContentType;
@@ -59,8 +56,10 @@ public class webServices {
                .when()
                .get(ROOT_URI + "/1/members/me/boards/");
        System.out.println("GET Response\n" + response.asString());
-//       assertThat(response.asString().jsonPath()
    }
+
+
+
 
     @Test(description = "DELETE")
     public void deleteTest() {
