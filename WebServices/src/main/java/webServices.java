@@ -24,20 +24,16 @@
 
 
 
-import static io.restassured.RestAssured.get;
-import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.hasItems;
-import static org.hamcrest.core.IsEqual.equalTo;
-import static org.testng.AssertJUnit.assertEquals;
 
-import io.restassured.path.json.JsonPath;
+import static io.restassured.RestAssured.given;
+import static org.hamcrest.MatcherAssert.assertThat;
+
 import org.hamcrest.Matchers;
 import org.testng.Assert;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
-import io.restassured.parsing.Parser;
+
 
 public class webServices {
 
@@ -52,44 +48,28 @@ public class webServices {
                 .when()
                 .post(ROOT_URI + "/1/boards/");
         System.out.println("POST Response\n" + response.asString());
-        response.then().body("name", Matchers.is("Marian"));
     }
 
-    /*@Test(description = "GET")
-    public void getTest( ) {*/
-      /*  Response response = get(ROOT_URI + "/1/members/me/boards/");
-        System.out.println(response.asString());
-
-        response.then().body("{\"id\": \"5c06f05e397179877c95b33c\",\"key\": \"06aacd672653757cb826c81e4605ab02\",\"token\": \"53b31836ef880c26c79d755b48c2298c3fd2c0a94094adc266f5411e97423a1e\"}")
-
-    }*/
-        /*Response response = get(ROOT_URI + "/1/members/me/boards/");
-        System.out.println("GET Response\n" + response.asString());
-        response.then().body("{\"id\": \"5c06f05e397179877c95b33c\",\"key\": \"06aacd672653757cb826c81e4605ab02\",\"token\": \"53b31836ef880c26c79d755b48c2298c3fd2c0a94094adc266f5411e97423a1e\"}")
-*/
-   /* @Test(description = "GET")
-    public void get_with_param(String id, String key, String token) {
-        get(ROOT_URI + "/1/members/me/boards/").then().body("5c06f05e397179877c95b33c", Matchers.is(id), "06aacd672653757cb826c81e4605ab02", Matchers.is(key), "53b31836ef880c26c79d755b48c2298c3fd2c0a94094adc266f5411e97423a1e", Matchers.is(token));
-    }*/
-
-   /* @DataProvider
-    public Object dpGetWithParam( ) {
-        Object testData = new Object
-                new Object {"5c06f05e397179877c95b33c", "06aacd672653757cb826c81e4605ab02", "53b31836ef880c26c79d755b48c2298c3fd2c0a94094adc266f5411e97423a1e"}
-
-        return testData;
-     }*/
    @Test(description = "Get")
    public void getTest() {
        Response response = given().
                contentType(ContentType.JSON)
                .accept(ContentType.JSON)
-               .pathParam("id", "5c06f05e397179877c95b33c")
-               .body("{\"key\": \"06aacd672653757cb826c81e4605ab02\",\"token\": \"53b31836ef880c26c79d755b48c2298c3fd2c0a94094adc266f5411e97423a1e\"}")
+               .body("{\"id\": \"5c06f05e397179877c95b33c\", \"key\": \"06aacd672653757cb826c81e4605ab02\",\"token\": \"53b31836ef880c26c79d755b48c2298c3fd2c0a94094adc266f5411e97423a1e\"}")
                .when()
-               .get(ROOT_URI + "/1/members/me/boards/{id}");
-       System.out.println("POST Response\n" + response.asString());
-       response.then().body("id", Matchers.is("5c06f05e397179877c95b33c"));
-
+               .get(ROOT_URI + "/1/members/me/boards/");
+       System.out.println("GET Response\n" + response.asString());
+//       assertThat(response.asString().jsonPath()
    }
+
+    @Test(description = "DELETE")
+    public void deleteTest() {
+        Response response = given().
+                contentType(ContentType.JSON)
+                .accept(ContentType.JSON)
+                .body("{\"id\": \"5c06f05e397179877c95b33c\", \"key\": \"06aacd672653757cb826c81e4605ab02\",\"token\": \"53b31836ef880c26c79d755b48c2298c3fd2c0a94094adc266f5411e97423a1e\"}")
+                .when()
+                .delete(ROOT_URI + "/1/members/me/boards/");
+        System.out.println("DELETE Response\n" + response.asString());
+    }
 }
